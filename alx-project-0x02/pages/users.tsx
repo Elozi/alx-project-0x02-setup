@@ -22,7 +22,6 @@ const Users: React.FC<UsersPageProps> = ({ users }) => {
   );
 };
 
-// ✅ Add static site generation
 export const getStaticProps = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/users");
   const data = await res.json();
