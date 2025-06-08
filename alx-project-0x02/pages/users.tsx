@@ -23,8 +23,8 @@ const Users: React.FC<UsersPageProps> = ({ users }) => {
 };
 
 
-// ✅ Add this for static site generation (required by checker)
-export const getStaticProps = async () => {
+// getStaticProps()
+export const getStaticProps () = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/posts?_limit=10");
   const data = await res.json();
 
